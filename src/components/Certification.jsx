@@ -11,7 +11,7 @@ const CERTIFICATIONS = [
 		title: 'Google Cloud Fundamentals',
 		issuer: 'Google Cloud Skills Boost',
 		date: '2025',
-		link: 'rUUnM4pU.pdf ',
+		link: '/rUUnM4pU.pdf',
 	},
 ];
 

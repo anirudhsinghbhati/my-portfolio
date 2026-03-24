@@ -7,6 +7,8 @@ const INITIAL_FORM = {
 	message: '',
 };
 
+const CONTACT_EMAIL = 'bhatianirudhsingh592@gmail.com';
+
 function Contact() {
 	const [formData, setFormData] = useState(INITIAL_FORM);
 	const [statusMessage, setStatusMessage] = useState('');
@@ -47,7 +49,7 @@ function Contact() {
 
 	const copyEmail = async () => {
 		try {
-			await navigator.clipboard.writeText('anirudh@example.com');
+			await navigator.clipboard.writeText(CONTACT_EMAIL);
 			setStatusMessage('Email copied to clipboard.');
 		} catch {
 			setStatusMessage('Could not copy email automatically.');
@@ -67,7 +69,7 @@ function Contact() {
 
 					<p>
 						<span aria-hidden="true">@</span>
-						<a href="mailto:bhatianirudhsingh592@gmail.com">bhatianirudhsingh592@gmail.com</a>
+						<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
 					</p>
 
 					<p>
@@ -83,6 +85,10 @@ function Contact() {
 							Linkedin
 						</a>
 					</p>
+
+					<button type="button" className="copy-btn" onClick={copyEmail}>
+						Copy Email
+					</button>
 
 				</aside>
 
