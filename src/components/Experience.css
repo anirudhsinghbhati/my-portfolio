@@ -1,0 +1,134 @@
+.experience-section {
+  min-height: 74vh;
+  padding: 7.5rem 1.2rem 3rem;
+  max-width: 1160px;
+  margin: 0 auto;
+  scroll-margin-top: 90px;
+}
+
+.experience-header h2 {
+  margin: 0;
+  color: #f8f9ff;
+  font-family: 'Space Grotesk', 'Trebuchet MS', sans-serif;
+  font-size: clamp(1.45rem, 3vw, 2.1rem);
+}
+
+.experience-header p {
+  margin: 0.7rem 0 0;
+  color: #c3cbdf;
+  max-width: 68ch;
+  line-height: 1.7;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 1.4rem;
+  display: grid;
+  gap: 0.95rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(rgba(77, 209, 198, 0.35), rgba(47, 162, 225, 0.22));
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2.05rem;
+  animation: expEnter 620ms ease both;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #4dd1c6 45%, #2fa2e1 100%);
+  box-shadow: 0 0 0 4px rgba(77, 209, 198, 0.18);
+}
+
+.timeline-card {
+  border-radius: 18px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.timeline-card:hover,
+.timeline-card:focus-within {
+  transform: translateY(-5px);
+  border-color: rgba(77, 209, 198, 0.52);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.25);
+}
+
+.timeline-type {
+  margin: 0;
+  color: #c7fff5;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.timeline-card h3 {
+  margin: 0.42rem 0 0;
+  color: #f8f9ff;
+  font-family: 'Space Grotesk', 'Trebuchet MS', sans-serif;
+  font-size: 1.02rem;
+}
+
+.timeline-meta {
+  margin: 0.45rem 0 0;
+  color: #b6c0db;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  font-size: 0.9rem;
+}
+
+.timeline-card ul {
+  margin: 0.72rem 0 0;
+  padding-left: 1.05rem;
+  color: #c3cbdf;
+  line-height: 1.68;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+}
+
+@keyframes expEnter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 680px) {
+  .experience-section {
+    padding: 6.9rem 0.9rem 2.8rem;
+  }
+
+  .timeline::before {
+    left: 9px;
+  }
+
+  .timeline-item {
+    padding-left: 1.75rem;
+  }
+
+  .timeline-dot {
+    left: 2px;
+  }
+}

@@ -1,0 +1,166 @@
+.about-section {
+  min-height: 74vh;
+  padding: 7.5rem 1.2rem 3rem;
+  max-width: 1160px;
+  margin: 0 auto;
+  scroll-margin-top: 90px;
+}
+
+.about-header h2 {
+  margin: 0;
+  color: #f8f9ff;
+  font-family: 'Space Grotesk', 'Trebuchet MS', sans-serif;
+  font-size: clamp(1.45rem, 3vw, 2.1rem);
+}
+
+.about-grid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.about-profile,
+.about-content {
+  border-radius: 18px;
+  padding: 1.05rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+}
+
+.about-profile {
+  text-align: center;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 0.55rem;
+}
+
+.avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 999px;
+  object-fit: cover;
+  object-position: center 22%;
+  display: block;
+  border: 2px solid rgba(77, 209, 198, 0.55);
+  box-shadow: 0 10px 24px rgba(38, 172, 215, 0.36);
+  transition: transform 220ms ease;
+}
+
+.about-profile:hover .avatar {
+  transform: scale(1.06);
+}
+
+.about-profile h3 {
+  margin: 0;
+  color: #f8f9ff;
+  font-family: 'Space Grotesk', 'Trebuchet MS', sans-serif;
+  font-size: 1.08rem;
+}
+
+.about-profile p {
+  margin: 0;
+  color: #c0c8e0;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  animation: aboutEnter 650ms ease both;
+}
+
+.about-content > p {
+  margin: 0;
+  color: #c3cbdf;
+  line-height: 1.72;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+}
+
+.education-card {
+  margin-top: 0.95rem;
+  border-radius: 14px;
+  padding: 0.9rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.education-card h4 {
+  margin: 0;
+  color: #f2f6ff;
+  font-family: 'Space Grotesk', 'Trebuchet MS', sans-serif;
+  font-size: 0.98rem;
+}
+
+.education-card ul {
+  margin: 0.68rem 0 0;
+  padding-left: 1.05rem;
+  color: #c3cbdf;
+  line-height: 1.68;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+}
+
+.about-highlights {
+  margin: 0.95rem 0 0;
+  padding-left: 1.05rem;
+  color: #c8fff6;
+  line-height: 1.68;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+}
+
+.about-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  line-height: 1.2;
+  margin-top: 1rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.72rem 1.18rem;
+  background: linear-gradient(120deg, #4dd1c6, #2fa2e1);
+  color: #071522;
+  font-weight: 700;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  cursor: pointer;
+  transition: transform 190ms ease, box-shadow 190ms ease;
+  box-shadow: 0 9px 24px rgba(38, 172, 215, 0.33);
+}
+
+.about-resume-btn:hover,
+.about-resume-btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(38, 172, 215, 0.4);
+}
+
+@keyframes aboutEnter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-profile {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .about-section {
+    padding: 6.9rem 0.9rem 2.8rem;
+  }
+}
